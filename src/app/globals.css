@@ -30,6 +30,7 @@
 body {
   background-color: var(--backColor);
   height: max-content;
+  min-height: 100dvh;
   overflow-x: hidden;
   width: 100dvw;
   /* overflow-y: hidden; */

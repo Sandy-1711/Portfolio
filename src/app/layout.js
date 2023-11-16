@@ -1,5 +1,6 @@
 import './globals.css'
 import LocoScroll from '../../hooks/LocoScroll/LocoScroll'
+import Loading from './components/Loading/Loading'
 
 
 export const metadata={
@@ -18,6 +19,8 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body >
         <div data-scroll-container>
+        {/* <Loading /> */}
+
           {children}
         </div>
       </body>

@@ -1,14 +1,12 @@
 "use client"
-import { useEffect } from "react";
+import { useEffect, useLayoutEffect } from "react";
 import Section1 from "./components/Section1/Section1";
 import Loading from "./components/Loading/Loading";
 import Nav from "./components/Nav/Nav";
 import Section2 from "./components/Section2/Section2";
 import Section3 from "./components/Section3/Section3";
 import Section4 from "./components/Section4/Section4";
-import Featured from "./components/Featured/Featured";
 import Journey from "./components/Journey/Journey";
-import Banner from "./components/Banner/Banner";
 import Projects from "./components/Projects/Projects";
 import Footer from "./components/Footer/Footer";
 import gsap, { Power0 } from "gsap";
@@ -18,7 +16,7 @@ import Hero from "./components/Hero/Hero";
 export default function Page() {
   LocoScroll(true);
 
-  useEffect(function () {
+  useLayoutEffect(function () {
 
     document.querySelector('.wrapper').addEventListener('mousemove', function (e) {
         var x1 = e.clientX - 75;
@@ -53,7 +51,6 @@ export default function Page() {
     })
 })
   return <div className='wrapper' >
-    {/* <Loading /> */}
     <div>
 
       <div id='mouse1' className={'mouse1'}></div>

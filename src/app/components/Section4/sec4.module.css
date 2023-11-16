@@ -1,0 +1,134 @@
+.main {
+    width: max-content;
+    height: 100dvh;
+
+    position: relative;
+}
+.hwrapper{
+    width: 300vw;
+    height: 100%;
+    display: flex;
+
+}
+.something{
+    position: relative;
+    height: 100%;
+    width: 100vw;
+}
+.main .container img {
+    height: 40vw;
+    width: 40vw;
+    max-width: 400px;
+    max-height: 400px;
+    /* position: absolute; */
+    /* top: 30%; */
+    /* left: 50%; */
+    /* transform: translate(-50%, -40%); */
+    color: var(--textColor);
+    fill: var(--backColor);
+}
+
+.main .container2 img {
+    height: 40vw;
+    width: 40vw;
+    max-width: 400px;
+    max-height: 400px;
+    /* position: absolute; */
+    /* top: 30%; */
+    /* left: 50%; */
+    /* transform: translate(-50%, -40%); */
+    color: var(--textColor);
+    fill: var(--backColor);
+}
+
+
+.container {
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    /* gap: 10vw; */
+    gap: 100px;
+}
+
+.main .container h1 {
+    position: relative;
+    /* top: 30vw; */
+    /* left: 50%; */
+    /* transform: translate(-50%, -10%); */
+    font-size: 10vw;
+    font-family: sans-serif;
+    color: var(--textColor);
+    text-align: center;
+    z-index: 0;
+}
+.container2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    gap: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container2 h1 {
+    position: relative;
+    /* top:30vw; */
+    /* left: 50%; */
+    /* transform: translate(-50%, -10%); */
+    font-size: 10vw;
+    font-family: sans-serif;
+    color: var(--textColor);
+    text-align: center;
+    z-index: 0;
+}
+
+.container2 h1 {
+    /* color: #ff007f; */
+    color: var(--backColor);
+    /* color: transparent; */
+    z-index: 1;
+}
+
+
+.container2 {
+    position: absolute;
+    background: var(--textColor);
+    top: 0;
+    height: 100%;
+    width: 100%;
+    clip-path: polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%);
+    /* clip-path:circle(0%); */
+    /* animation: animate 2s infinite alternate; */
+}
+
+
+@media screen and (width<850px) {
+    .container2{
+        display: none;
+    }   
+    .main{
+        height: max-content;
+    }
+    .hwrapper{
+        flex-direction: column;
+        width: 100vw;
+        height: max-content;
+    }
+    .container{
+        position: relative;
+        gap: 10vw;
+        padding: 20vw 0;
+    }
+    .main .container img{
+        height: 50vw;
+        width: 50vw;
+    }
+
+}

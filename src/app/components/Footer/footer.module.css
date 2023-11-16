@@ -1,0 +1,94 @@
+.footer {
+    height: 100dvh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+}
+
+.footer h1 {
+    font-size: 7vw;
+    font-family: sans-serif;
+    color: var(--textColor);
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    /* width: 30%; */
+
+}
+
+.text h2 {
+    font-family: sans-serif;
+    color: var(--textLightColor);
+}
+.text p,
+.text a {
+    font-family: sans-serif;
+    color: var(--textExtraLightColor);
+    letter-spacing: 1px;
+    margin-top: 5px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.text a {
+    font-weight: 400;
+    text-decoration: underline;
+    color: var(--pink);
+    margin-right: 10px;
+}
+.text a:hover {
+    color: blue;
+}
+.contact a{
+    text-decoration: none;
+}
+
+.copysection {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.copysection span {
+    font-family: sans-serif;
+    color: var(--textColor);
+    font-weight: 400;
+    font-size: 20px;
+}
+.copysection a,.copysection a span
+{
+    margin: 0;
+    text-decoration: none;
+    color: var(--pink);
+    cursor: pointer;
+}
+.imageBox{
+    width: 500px;
+    height: auto;
+}
+.imageBox img{
+    /* object-fit: cover; */
+    height: 100%;
+    width: 100%;
+    filter: drop-shadow(5px 5px 5px black);
+}
+@media screen and (width<850px) {
+    .footer{
+        height: max-content;
+        padding-top: 10vw;
+        padding-bottom: 10vw;
+    }
+    .copysection{
+        gap: 5px;
+
+    }
+    .copysection span{
+        font-size: 18px;
+    }
+
+}

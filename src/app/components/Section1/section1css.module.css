@@ -1,0 +1,133 @@
+.page {
+
+    /* height: 150dvh; */
+    width: 100dvw;
+    /* background-color: var(--textColor); */
+    position: relative;
+}
+
+.text1 {
+    /* background-color: aqua; */
+    position: relative;
+    width: max-content;
+    top: 10%;
+    left: 10%;
+}
+
+.text1 h2 {
+    color: var(--textColor);
+    font-size: 52px;
+    font-family: 'bayland';
+    font-weight: 100;
+}
+
+.text1 h2 span {
+    font-size: 52px;
+    font-family: 'bayland';
+    font-weight: 100;
+    display: inline-block;
+}
+
+.text1 p {
+    font-family: sans-serif;
+    color: var(--textColor);
+    font-size: 1.5vw;
+    font-weight: 400;
+    width: 60%;
+    line-height: 2vw;
+}
+
+.portrait {
+    /* transform: translate(-50%, -50%); */
+    height: auto;
+    width: 20%;
+    margin: 5vw auto;
+}
+
+.portrait img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    filter: grayscale(1);
+}
+
+.text2 {
+    width: 60%;
+    margin: auto;
+    margin-bottom: 100px;
+}
+
+.text2 p {
+    font-family: sans-serif;
+    margin-top: 2vw;
+    font-weight: 400;
+    font-size: 1.3vw;
+    line-height: 2vw;
+    letter-spacing: 0.1vw;
+    color: var(--textColor);
+}
+
+.text2 strong {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    letter-spacing: 0px;
+    color: black;
+}
+
+.contactButton {
+    margin-top: 15px;
+    /* background-color: white; */
+    /* padding: 10px 20px; */
+}
+
+.contactButton button {
+    background-color: white;
+    padding: 15px 20px;
+    font-family: sans-serif;
+    font-size: 18px;
+    /* border: none; */
+    cursor: pointer;
+    outline: none;
+    box-shadow: 5px 5px var(--textColor);
+    text-transform: uppercase;
+}
+
+.contactButton button:hover {
+    transition: all .1s ease-in-out;
+    /* background-color: #f79d2c; */
+    box-shadow: 0px 0px var(--textColor);
+    transform: translate(2px, 2px);
+    /* color: white; */
+}
+
+@media screen and (width<850px) {
+    .text1 p {
+        width: 95%;
+        font-size: 4vw;
+        line-height: 5vw;
+        padding-left: 10px;
+    }
+
+    .portrait {
+        width: 50%;
+        margin: 10vw auto;
+    }
+
+    .text1 {
+        padding-left: 10px;
+        width: 100%;
+        top: 0;
+        left: 0px;
+    }
+
+    .text2 {
+        width: 100%;
+        padding-left: 10px;
+    }
+
+    .text2 p {
+        width: 95%;
+        font-size: 4vw;
+        line-height: 5vw;
+    }
+}

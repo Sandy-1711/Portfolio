@@ -1,0 +1,104 @@
+.main {
+    height: max-content;
+    width: 100vw;
+}
+
+.main .boat {
+    max-height: 500px;
+    
+    height: 40vw;
+    width: 40vw;
+    padding-top: 100px;
+    max-width: 500px;
+    margin: auto;
+    position: relative;
+}
+
+.main .boat svg {
+    height: 100%;
+    width: 100%;
+    color: var(--textColor);
+    stroke-width: 4px;
+}
+
+.main h1 {
+    text-align: center;
+    font-size: 12vw;
+    font-family: sans-serif;
+    color: var(--textColor);
+}
+
+.main p {
+    font-size: 2vw;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: var(--textColor);
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.circles {
+    height: max-content;
+    padding-top: 2vw;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /* transform: translate(80px); */
+}
+
+.circle {
+    max-height: 350px;
+    /* min-width: 18vw; */
+    max-width: 350px;
+    height: 25vw;
+    width: 25vw;
+    background: #F0EEE8;
+    /* transform: translate(calc(var(--i) * -40px)); */
+    border-radius: 50%;
+    box-shadow: -0.9vw 0.2vw var(--textColor);
+    border: 1px solid var(--textColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* .circle:nth-child(5) {
+    transform: translate(calc(var(--i) * -40px), -40px);
+}
+
+.circle:nth-child(6) {
+    transform: translate(calc(var(--i) * -40px), -40px);
+} */
+
+.circle i {
+    font-family: sans-serif;
+    font-size: 1.5vw;
+    font-weight: 600;
+    color: var(--textColor);
+}
+
+.circle p {
+    color: var(--textColor);
+    font-size: 1.2vw;
+    margin: 0.2vw;
+}
+@media screen and (width<850px) {
+    .circle{
+        width: 45vw;
+        height: 45vw;
+    }
+    .circle i{
+        font-size: 4vw;
+    }
+    .circle p{
+        font-size: 2.5vw;
+    }
+}

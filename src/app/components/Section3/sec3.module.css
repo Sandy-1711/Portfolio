@@ -1,0 +1,25 @@
+.main{
+    height: 100dvh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.text{
+    width: 90%;
+    margin: auto;
+}
+.text span{
+    font-family: sans-serif;
+    font-size: 9vw;
+    font-weight: 800;
+    color:var(--backColor);
+    -webkit-text-stroke: var(--textColor);
+    -webkit-text-stroke-width: 2px;
+}
+@media screen and (width<850px) {
+    .main{
+        height: max-content;
+        padding: 10vw 0;
+    }
+}

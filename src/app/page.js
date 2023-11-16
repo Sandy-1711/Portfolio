@@ -1,95 +1,92 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+"use client"
+import { useEffect } from "react";
+import Section1 from "./components/Section1/Section1";
+import Loading from "./components/Loading/Loading";
+import Nav from "./components/Nav/Nav";
+import Section2 from "./components/Section2/Section2";
+import Section3 from "./components/Section3/Section3";
+import Section4 from "./components/Section4/Section4";
+import Featured from "./components/Featured/Featured";
+import Journey from "./components/Journey/Journey";
+import Banner from "./components/Banner/Banner";
+import Projects from "./components/Projects/Projects";
+import Footer from "./components/Footer/Footer";
+import gsap, { Power0 } from "gsap";
+import LocoScroll from "../../hooks/LocoScroll/LocoScroll";
+import Hero from "./components/Hero/Hero";
 
-export default function Home() {
-  return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+export default function Page() {
+  LocoScroll(true);
+
+  useEffect(function () {
+
+    document.querySelector('.wrapper').addEventListener('mousemove', function (e) {
+        var x1 = e.clientX - 75;
+        var y1 = e.clientY - 75;
+        var x2 = e.clientX - 50;
+        var y2 = e.clientY - 50;
+        var x3 = e.clientX - 25;
+        var y3 = e.clientY - 25;
+        // console.log(y);
+        gsap.to('.mouse1', {
+            // x: x,
+            left: x1,
+            top: y1,
+            ease: Power0.easeInOut,
+            // y: y,
+        })
+        gsap.to('.mouse2', {
+            // x: x,
+            left: x2,
+            top: y2,
+            // delay:0.1,
+            ease: Power0.easeInOut,
+            // y: y,
+        })
+        gsap.to('.mouse3', {
+            // x: x,
+            left: x3,
+            top: y3,
+            // y: y,
+        })
+        
+    })
+})
+  return <div className='wrapper' >
+    {/* <Loading /> */}
+    <div>
+
+      <div id='mouse1' className={'mouse1'}></div>
+      <div id='mouse2' className={'mouse2'}></div>
+      <div id='mouse3' className={'mouse3'}></div>
+
+      <div id="container">
+        <div id="circle">
+          <svg x="0px" y="0px" width="300px" height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" space="preserve">
+            <defs>
+              <path id="circlePath" d=" M 150, 150 m -60, 0 a 60,60 0 0,1 120,0 a 60,60 0 0,1 -120,0 " />
+            </defs>
+            <circle cx="150" cy="100" r="75" fill="none" />
+            <g>
+              <use href="#circlePath" fill="none" />
+              <text fill="#000">
+                <textPath href="#circlePath">Text rotating around a circle path with SVG!</textPath>
+              </text>
+            </g>
+          </svg>
         </div>
       </div>
+      <Nav />
+      <Hero/>
+      <Section1 />
+      <Section2 />
+      <Section3 />
+      <Section4 />
+      <Journey/>
+      {/* <Banner/> */}
+      <Projects />
+      <Footer/>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+    </div>
+  </div>
 }

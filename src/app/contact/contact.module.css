@@ -1,0 +1,161 @@
+.contactPage {
+    height: 100dvh;
+    width: 100vw;
+    background-color: var(--textColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contactPage form {
+    background: var(--backColor);
+    width: max-content;
+    height: max-content;
+    /* border-radius: 20px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 50px;
+}
+
+.contactPage form label {
+    font-family: sans-serif;
+    color: var(--textColor);
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.contactPage form input {
+    padding: 12px 12px 10px;
+    border-radius: 5px;
+    min-width: 300px;
+    outline: none;
+    border: none;
+    border: 1px solid var(--textColor);
+    font-size: 18px;
+    font-family: sans-serif;
+}
+
+.contactPage form h1 {
+    font-size: 40px;
+    text-transform: uppercase;
+    color: var(--textColor);
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.contactPage form button {
+    cursor: pointer;
+    background: var(--pink);
+    border: 1px solid var(--textColor);
+    box-shadow: 5px 5px var(--textColor);
+    margin-top: 10px;
+    font-size: 18px;
+    font-family: sans-serif;
+    color: var(--backColor);
+    padding: 10px 20px;
+    text-transform: uppercase;
+    transition: .1s ease-in-out;
+}
+
+.contactPage form textarea {
+    font-size: 18px;
+    padding-left: 10px;
+    padding-top: 10px;
+    font-weight: 400;
+    font-family: sans-serif;
+}
+
+.contactPage form button:hover {
+    transform: translate(2.5px, 2.5px);
+    box-shadow: 0px 0px var(--textColor);
+}
+
+.backButton {
+    position: absolute;
+    left: 5%;
+    top: 10%;
+    height: 40px;
+    width: 40px;
+    background: var(--pink);
+    box-shadow: 2.5px 2.5px var(--backColor);
+    transition: 0.1s ease-in-out;
+}
+
+.backButton::before {
+    position: absolute;
+    content: '';
+    left: 50%;
+    top: 50%;
+    height: 50%;
+    width: 50%;
+    transform: translate(-50%, -50%);
+    border-left: 2px solid var(--textColor);
+    border-top: 2px solid var(--textColor);
+
+}
+
+.backButton::after {
+    position: absolute;
+    content: '';
+    height: 70%;
+    width: 2px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    background: var(--textColor);
+}
+
+.backButton:hover {
+    box-shadow: 0px 0px var(--backColor);
+    transform: translate(1.25px, 1.25px);
+}
+
+.contactPage form p {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.connect {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.connect a {
+    text-decoration: none;
+    color: var(--pink);
+}
+
+.connect a:hover {
+    color: blue;
+}
+
+.connect a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.connect img {
+    height: 30px;
+    width: 30px;
+}
+
+@media screen and (width<850px) {
+    .contactPage form{
+        padding: 40px;
+    }
+    .contactPage form input {
+        min-width: 180px;
+    }
+    .contactPage textarea{
+        resize: vertical;
+    }
+    .backButton{
+        top: 5%;
+        background: var(--backColor);
+        box-shadow: 2.5px 2.5px var(--pink);
+    }
+}

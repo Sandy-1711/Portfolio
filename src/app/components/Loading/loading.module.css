@@ -1,0 +1,20 @@
+.homePage
+{
+    height: 100dvh;
+    width: 100dvw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(245, 149, 39);
+    color: white;
+    /* background: url('/loadingBackground.jpeg'); */
+    background-size: cover;
+    z-index: 11;
+}
+.homePage h1{
+    font-size: 18vh;
+    -webkit-text-stroke: 1px black;
+}

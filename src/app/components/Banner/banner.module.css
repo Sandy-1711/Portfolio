@@ -1,0 +1,94 @@
+.main {
+    
+    height: 100dvh;
+    position: relative;
+    width: 100vw;
+    /* overflow: hidden; */
+}
+
+
+.banner p {
+    background: var(--textColor);
+    user-select: none;
+    pointer-events: none;
+    color: var(--backColor);
+    font-size: 10vw;
+    font-weight: 600;
+    width: max-content;
+    min-width: fit-content;
+    font-family: sans-serif;
+    transform-origin: center;
+    /* position: absolute; */
+    /* top: 50%; */
+    /* left: 50%; */
+    /* transform: translate(-50%, -50%); */
+    padding: 30px;
+    border: 1px solid var(--backColor);
+    transform-origin: center;
+}
+
+.banner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: center;
+    transform: translate(-50%, -50%) rotate(0deg);
+    /* transform: rotate(0deg); */
+    overflow: hidden;
+}
+
+.banner1 p {
+    transform: translate(-60%);
+}
+
+.banner2 p {
+    transform: translate(-60%);
+}
+
+.banner3 p {
+    transform: translate(60%);
+}
+
+.banner4 p {
+    transform: translate(-60%);
+}
+
+.banner5 p {
+    transform: translate(60%);
+}
+
+.banner1 {
+    transform: translate(-50%, -50%) rotate(5deg);
+
+}
+
+.banner2 {
+    transform: translate(-50%, -100%) rotate(15deg);
+}
+
+.banner3 p {
+    background: var(--backColor);
+    color: var(--textColor);
+    border-color: var(--textColor);
+}
+
+.banner3 {
+    transform: translate(-50%, -50%) rotate(10deg);
+
+}
+
+.banner4 {
+    transform: translate(-50%, 0%) rotate(-10deg);
+}
+
+.banner5 {
+    transform: translate(-50%, -50%) rotate(-20deg);
+
+}
+@media screen and (width<850px) {
+    .main{
+        height: 50vh;
+        overflow-x: hidden;
+        max-width: 100vw;
+    }
+}

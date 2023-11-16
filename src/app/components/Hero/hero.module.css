@@ -1,0 +1,138 @@
+.main {
+    height: 100dvh;
+    overflow-x: hidden;
+    width: 100vw;
+    max-width: 100vw;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.text {
+    font-family: sans-serif;
+    font-weight: 600;
+    color: var(--textColor);
+    font-size: 14vw;
+}
+.title{
+    font-size: 3vw;
+    position: relative;
+    display: flex;
+    width: 100%;
+    text-transform: uppercase;
+    justify-content: flex-end;
+    align-items: center;
+    font-weight: 400;
+}
+.fname {
+    line-height: 12vw;
+}
+
+.sname {
+    line-height: 12vw;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.snameContainer {
+    display: inline-block;
+    transform-origin: center;
+    /* transform: rotateZ(50deg); */
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+}
+
+.snameContainer span {
+    display: inline-block;
+    transform-origin: center;
+}
+
+.scrolltext {
+    position: absolute;
+    left: -100px;
+    height: max-content;
+    width: max-content;
+    bottom: 20%;
+}
+
+.scrolltext {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.scrolltext>div {
+    width: 300px;
+    transform-origin: center;
+    transform: rotate(90deg);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+.scrolltext span {
+    font-size: 1.5vw;
+    color: var(--textColor);
+    font-weight: 100;
+    position: relative;
+}
+
+.line {
+    /* display: block; */
+    height: 2px;
+    /* margin-top: 4px; */
+    width: 50px;
+    background-color: var(--textColor);
+    animation: line 4s infinite linear;
+    position: relative;
+}
+
+.line::before {
+    content: '';
+    height: 1vw;
+    width: 1vw;
+    position: absolute;
+    border-right: 2px solid var(--textColor);
+    border-top: 2px solid var(--textColor);
+    transform-origin: center;
+    transform: rotate(45deg);
+    right: 3px;
+    top: -9px;
+}
+
+@keyframes line {
+
+    0%,
+    100% {
+        width: 50px;
+    }
+
+    50% {
+        width: 100px;
+    }
+}
+
+@media screen and (width<850px) {
+    .text {
+        font-size: 19vw;
+    }
+
+    .fname,
+    .sname {
+        line-height: 15vw;
+    }
+
+    .scrolltext {
+        display: none;
+    }
+    .title{
+        font-size: 7vw;
+        display: flex;
+        justify-content: space-evenly;
+    }
+}

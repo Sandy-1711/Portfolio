@@ -56,7 +56,7 @@ export default function Page() {
       <div id='mouse1' className={'mouse1'}></div>
       <div id='mouse2' className={'mouse2'}></div>
       <div id='mouse3' className={'mouse3'}></div>
-
+{/* 
       <div id="container">
         <div id="circle">
           <svg x="0px" y="0px" width="300px" height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" space="preserve">
@@ -72,7 +72,7 @@ export default function Page() {
             </g>
           </svg>
         </div>
-      </div>
+      </div> */}
       <Nav />
       <Hero/>
       <Section1 />

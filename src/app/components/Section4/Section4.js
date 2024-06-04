@@ -79,7 +79,7 @@ export default function Section4() {
                 <div className={featcss.text}>
                     <h1>WEB</h1>
                     <h1>ACCURACY</h1>
-                    <a href='https://web-accuracy.netlify.app'><button>VIEW</button></a>
+                    <a href='https://www.webaccuracy.com'><button>VIEW</button></a>
                 </div>
                 <div className={featcss.images}>
                     <img src='/Featured1-desktop.png' />
@@ -106,7 +106,7 @@ export default function Section4() {
                     <div className={featcss.featureInfo}>
                         <h2>WEB ACCURACY</h2>
                         <p>Web Accuracy is a startup that focuses on giving reliable and top notch support for various type of services.</p>
-                        <a target='blank' href='https://web-accuracy.netlify.app'><button>VIEW</button></a>
+                        <a target='blank' href='https://www.webaccuracy.com'><button>VIEW</button></a>
                     </div>
                 </div>
 
